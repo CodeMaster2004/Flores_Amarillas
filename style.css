@@ -17,19 +17,33 @@
 
 
 body {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 100vh;
-   font-family: 'Sacramento', cursive;
-   background-color: #000000;
-   overflow: hidden;
- }
- 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Sacramento', cursive;
+  background-color: #000000;
+  overflow: hidden;
+  margin: 0; /* Elimina márgenes del body */
+}
+
+.valentines-day {
+  position: relative;
+  cursor: pointer;
+  /* Añadir un margen para el centrado vertical en pantallas pequeñas */
+  margin: auto; 
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
  .valentines-day {
-   position: relative;
-   cursor: pointer;
+   position: fixed; /* Asegúrate de que se mantenga centrado */
+   top: 50%; /* Centra verticalmente */
+   left: 50%; /* Centra horizontalmente */
+   transform: translate(-50%, -50%); /* Ajusta para el centrado exacto */
  }
+}
+
  
  .partAtras {
    position: relative;
